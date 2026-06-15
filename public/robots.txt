@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://konstantin-dudersky.github.io/automation/sitemap-index.xml
+Sitemap: https://konstantin-dudersky.github.io/sitemap-index.xml
