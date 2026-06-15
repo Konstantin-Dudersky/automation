@@ -21,6 +21,9 @@ export default defineConfig({
           ],
         },
       ],
+      components: {
+        Header: "./src/components/Header.astro",
+      },
     }),
   ],
 });
