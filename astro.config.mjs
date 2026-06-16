@@ -24,13 +24,21 @@ export default defineConfig({
       ],
       sidebar: [
         {
+          label: "Весоизмерительные системы",
+          link: "/weight/",
+        },
+        {
+          label: "Распределённая периферия",
+          link: "/distributed/",
+        },
+        {
           label: "Модули",
           collapsed: true,
           items: [{ autogenerate: { directory: "modules", collapsed: true } }],
         },
         {
           label: "Контакты",
-          link: "/contacts",
+          link: "/contacts/",
         },
       ],
       lastUpdated: true,
