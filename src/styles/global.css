@@ -1,0 +1,58 @@
+/* Reset core MathML display elements */
+math {
+    display: inline-math;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    direction: ltr;
+}
+
+math[display="block"] {
+    display: block;
+    margin: 1rem 0;
+    text-align: center;
+}
+
+/* Clear browser-specific padding and margins */
+mrow,
+mtext,
+mtext *,
+mi,
+mn,
+mo,
+mspace,
+mstyle,
+mfrac,
+msqrt,
+mroot,
+msub,
+msup,
+msubsup,
+munder,
+mover,
+munderover,
+mmultiscripts,
+mtable,
+mtr,
+mtd,
+maction {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+/* Ensure proper spacing behaviors for operators */
+mo {
+    font-variant: normal;
+    line-height: 1;
+}
+
+/* Normalize tables used inside MathML */
+mtable {
+    border-collapse: collapse;
+    border-spacing: 0;
+}

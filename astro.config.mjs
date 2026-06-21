@@ -2,10 +2,16 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import starlightScrollToTop from "starlight-scroll-to-top";
+import remarkMath from "remark-math";
+import rehypeKatex from "rehype-katex";
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://konstantin-dudersky.github.io",
+  markdown: {
+    remarkPlugins: [remarkMath],
+    rehypePlugins: [[rehypeKatex, { output: "mathml" }]],
+  },
   integrations: [
     starlight({
       title: "Электроника",
@@ -21,6 +27,7 @@ export default defineConfig({
         { icon: "youtube", label: "YouTube", href: "https://www.youtube.com/@Tokarev_by" },
         { icon: "github", label: "GitHub", href: "https://github.com/Konstantin-Dudersky" },
       ],
+      customCss: ["./src/styles/global.css"],
       sidebar: [
         {
           label: "Весоизмерительные системы",
