@@ -1,5 +1,5 @@
 // @ts-check
-import { defineConfig } from "astro/config";
+import { defineConfig, svgoOptimizer } from "astro/config";
 import starlight from "@astrojs/starlight";
 import { unified } from "@astrojs/markdown-remark";
 
@@ -59,4 +59,7 @@ export default defineConfig({
       credits: true,
     }),
   ],
+  experimental: {
+    svgOptimizer: svgoOptimizer(),
+  },
 });
