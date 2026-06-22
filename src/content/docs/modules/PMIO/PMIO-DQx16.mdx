@@ -7,7 +7,9 @@ description: A guide in my new Starlight docs site.
 
 ## Схема внешних подключений
 
-![Схема внешних подключений модуля PMIO-DQx16](./images/PMIO-DQx16_ext_conn.svg)
+import ExtConn from "./images/PMIO-DQx16_ext_conn.svg";
+
+<ExtConn />
 
 Напряжение на выходах CH00 - CH15 соответствует напряжению источника питания, подключенного к коннектору X2.
 
@@ -15,7 +17,9 @@ description: A guide in my new Starlight docs site.
 
 ## Описание
 
-![Схема модуля PMIO-DQx16](./images/PMIO-DQx16_schematic.svg)
+import Schematic from "./images/PMIO-DQx16_schematic.svg";
+
+<Schematic />
 
 Модуль управляется по протоколу I²C из шины IBus. Для обеспечения гальванической изоляции используется I²C-изолятор CA-IS3021[^1].
 

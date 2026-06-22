@@ -7,7 +7,9 @@ description: A guide in my new Starlight docs site.
 
 ## Схема внешних подключений
 
-![Схема внешних подключений модуля PMIO-RQx8](./images/PMIO-RQx8_ext_conn.svg)
+import ExtConn from "./images/PMIO-RQx8_ext_conn.svg";
+
+<ExtConn />
 
 - Power AC - источник переменного напряжения
 - Power DC - источник постоянного напряжения
@@ -19,7 +21,9 @@ description: A guide in my new Starlight docs site.
 
 ## Описание
 
-![Схема модуля PMIO-RQx8](./images/PMIO-RQx8_schematic.svg)
+import Schematic from "./images/PMIO-RQx8_schematic.svg";
+
+<Schematic />
 
 GPIO расширитель MCP23017[^1] получает команды по шине I²C и управляет выходами.
 
