@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /rsiot-docs
 
 Sitemap: https://konstantin-dudersky.github.io/sitemap-index.xml
