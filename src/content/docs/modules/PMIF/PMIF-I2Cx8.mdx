@@ -2,9 +2,11 @@
 title: PMIF-I2Cx8
 description: Подробное описание модуля PMIF-I2Cx8 - опрос датчиков по интерфейсу I²C
 ---
+import Options  from '../../../../components/Options.astro';
 
 import ExtConn from "./PMIF-I2Cx8/ext_conn.svg";
 import Schematic from "./PMIF-I2Cx8/schematic.svg";
+import { options_config } from './PMIF-I2Cx8/options.ts';
 
 Модуль для подключения периферийных устройств по интерфейсу I²C.
 
@@ -21,6 +23,8 @@ import Schematic from "./PMIF-I2Cx8/schematic.svg";
 - L+
 
 ## Опции
+
+<Options options_config = {options_config} />
 
 ## Описание
 

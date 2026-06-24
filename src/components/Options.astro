@@ -2,9 +2,9 @@
 import { Steps } from "@astrojs/starlight/components";
 
 interface Props {
-    config: IAllOptions;
+    options_config: IOptionsConfig;
 }
-const { config } = Astro.props;
+const { options_config } = Astro.props;
 
 export interface IOptionVariant {
     name: string;
@@ -14,24 +14,26 @@ export interface IOptionVariant {
 
 export interface IOption {
     name: string;
-    variants: IOptionVariant[];
     default: number;
+    variants: IOptionVariant[];
 }
 
-export interface IAllOptions {
+export interface IOptionsConfig {
     base_price: number;
     options: IOption[];
 }
 ---
 
-<p>Конфигурация: <b><code id="option_variant_config" style="font-size: 1rem;"></code></b></p>
+<p>
+    Заданная конфигурация: <b><code id="option_variant_config" style="font-size: 1rem;"></code></b>
+</p>
 
 <p>Стоимость: <b><code id="price" style="font-size: 1rem;"></code> $</b></p>
 
 <Steps>
     <ol>
         {
-            config.options.map((o, o_index) => (
+            options_config.options.map((o, o_index) => (
                 <li>
                     <p>{o.name}</p>
                     {o.variants.map((ov, ov_index) => (
@@ -44,7 +46,7 @@ export interface IAllOptions {
                                 class="data-option"
                             />
                             <label for={"option_" + o_index.toString() + "_" + ov_index.toString()}>
-                                {ov.desc} (+{ov.price.toFixed(2)} $)
+                                {ov.desc} (+{ov.price.toFixed(1)} $)
                             </label>
                         </div>
                     ))}
@@ -54,16 +56,16 @@ export interface IAllOptions {
     </ol>
 </Steps>
 
-<script is:inline define:vars={{ config }}>
+<script is:inline define:vars={{ options_config }}>
     // Установить значения по умолчанию для опций
     function setOptionsDefault() {
-        for (let i = 0; i < config.options.length; i += 1) {
+        for (let i = 0; i < options_config.options.length; i += 1) {
             let radio = document.querySelector(
-                `#option_${i.toString()}_${config.options[i].default}`,
+                `#option_${i.toString()}_${options_config.options[i].default}`,
             );
             if (radio === null) {
                 console.warn(
-                    `Для опции "${config.options[i].name}" нельзя установить значение по умолчанию`,
+                    `Для опции "${options_config.options[i].name}" нельзя установить значение по умолчанию`,
                 );
                 continue;
             }
@@ -75,19 +77,21 @@ export interface IAllOptions {
 
     function updateData() {
         const checkedVariants = document.querySelectorAll(".data-option:checked");
-        let price = config.base_price;
+        let price = options_config.base_price;
         let option_variants = [];
         checkedVariants.forEach((ov) => {
             let option_index = parseInt(ov.name);
             let option_variant_index = parseInt(ov.value);
 
-            price += config.options[option_index].variants[option_variant_index].price;
-            option_variants.push(config.options[option_index].variants[option_variant_index].name);
+            price += options_config.options[option_index].variants[option_variant_index].price;
+            option_variants.push(
+                options_config.options[option_index].variants[option_variant_index].name,
+            );
         });
 
-        document.querySelector("#price").textContent = price.toFixed(2);
+        document.querySelector("#price").textContent = price.toFixed(1);
 
-        let option_string = option_variants.join("-");
+        let option_string = option_variants.join("/");
         document.querySelector("#option_variant_config").textContent = option_string;
     }
 
@@ -97,9 +101,6 @@ export interface IAllOptions {
 
     const buttons = document.querySelectorAll(".data-option");
     buttons.forEach((button) => {
-        button.addEventListener("click", () =>
-            // alert(button.name)
-            updateData(),
-        );
+        button.addEventListener("click", () => updateData());
     });
 </script>

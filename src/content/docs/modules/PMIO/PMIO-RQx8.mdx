@@ -3,11 +3,15 @@ title: PMIO-RQx8
 description: A guide in my new Starlight docs site.
 ---
 
+import Options  from '../../../../components/Options.astro';
+
+import Schematic from "./PMIO-RQx8/schematic.svg";
+import ExtConn from "./PMIO-RQx8/ext_conn.svg";
+import { options_config } from './PMIO-RQx8/options.ts';
+
 Модуль для управления 8 дискретными релейными выходами. Выход - нормально открытый контакт, к которому можно подключить нагрузку до 230В/3А на канал.
 
 ## Схема внешних подключений
-
-import ExtConn from "./images/PMIO-RQx8_ext_conn.svg";
 
 <ExtConn />
 
@@ -19,9 +23,9 @@ import ExtConn from "./images/PMIO-RQx8_ext_conn.svg";
 
 ## Опции
 
-## Описание
+<Options options_config = {options_config} />
 
-import Schematic from "./images/PMIO-RQx8_schematic.svg";
+## Описание
 
 <Schematic />
 

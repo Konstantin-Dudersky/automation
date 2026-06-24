@@ -2,6 +2,11 @@
 title: PMIO-DIx32
 description: Подробное описание модуля PMIO-DIx32 - 32 дискретных входа
 ---
+import Options  from '../../../../components/Options.astro';
+
+import Schematic from "./PMIO-DIx32/schematic.svg";
+import ExtConn from "./PMIO-DIx32/ext_conn.svg";
+import { options_config } from './PMIO-DIx32/options.ts';
 
 Модуль для подключения 32 дискретных входов постоянного напряжения.
 
@@ -11,17 +16,15 @@ description: Подробное описание модуля PMIO-DIx32 - 32 д
 
 ## Схема внешних подключений
 
-import ExtConn from "./images/PMIO-DIx32_ext_conn.svg";
-
 <ExtConn />
 
 Датчики можно подключать по схеме PNP или NPN. Конкретный тип выбирается с помощью перемычки на плате. Перемычка задаёт тип схемы для всех 32 каналов в модуле.
 
 ## Опции
 
-## Описание
+<Options options_config = {options_config} />
 
-import Schematic from "./images/PMIO-DIx32_schematic.svg";
+## Описание
 
 <Schematic />
 

@@ -3,11 +3,15 @@ title: PMIO-DQx16
 description: A guide in my new Starlight docs site.
 ---
 
+import Options  from '../../../../components/Options.astro';
+
+import Schematic from "./PMIO-DQx16/schematic.svg";
+import ExtConn from "./PMIO-DQx16/ext_conn.svg";
+import { options_config } from './PMIO-DQx16/options.ts';
+
 Модуль для управления 16 дискретными транзисторными выходами. Выходное напряжение до 50 В, до 200 мА на канал.
 
 ## Схема внешних подключений
-
-import ExtConn from "./images/PMIO-DQx16_ext_conn.svg";
 
 <ExtConn />
 
@@ -15,9 +19,9 @@ import ExtConn from "./images/PMIO-DQx16_ext_conn.svg";
 
 ## Опции
 
-## Описание
+<Options options_config = {options_config} />
 
-import Schematic from "./images/PMIO-DQx16_schematic.svg";
+## Описание
 
 <Schematic />
 
