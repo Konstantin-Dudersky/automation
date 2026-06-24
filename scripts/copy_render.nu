@@ -19,6 +19,7 @@ def copy [article: string, version: string] {
 copy PMCP-ESP32C3 0.1.0
 copy PMCP-LLP 0.1.0
 copy PMIF-I2Cx8 0.1.0
+copy PMIO-AITx8 0.1.0
 copy PMIO-DIx32 0.1.0
 copy PMIO-DQx16 0.1.0
 copy PMIO-RQx8 0.1.0
