@@ -24,9 +24,9 @@ export interface IAllOptions {
 }
 ---
 
-<p id="option_variant_config"></p>
+<p>Конфигурация: <b><code id="option_variant_config" style="font-size: 1rem;"></code></b></p>
 
-<p id="price"></p>
+<p>Стоимость: <b><code id="price" style="font-size: 1rem;"></code> $</b></p>
 
 <Steps>
     <ol>
@@ -85,11 +85,10 @@ export interface IAllOptions {
             option_variants.push(config.options[option_index].variants[option_variant_index].name);
         });
 
-        document.querySelector("#price").textContent = `Стоимость: ${price.toFixed(2)} $`;
+        document.querySelector("#price").textContent = price.toFixed(2);
 
         let option_string = option_variants.join("-");
-        document.querySelector("#option_variant_config").textContent =
-            `Конфигурация: ${option_string}`;
+        document.querySelector("#option_variant_config").textContent = option_string;
     }
 
     window.onload = function () {
