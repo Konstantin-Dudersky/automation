@@ -1,6 +1,5 @@
 ---
 import { Steps } from "@astrojs/starlight/components";
-import { Tabs, TabItem } from "@astrojs/starlight/components";
 
 interface Props {
     options_config: IOptionsConfig;
@@ -31,29 +30,31 @@ export interface IOptionsConfig {
 
 <p>Стоимость: <b><code id="price" style="font-size: 1rem;"></code> $</b></p>
 
-<Tabs>
-    {
-        options_config.options.map((o, o_index) => (
-            <TabItem label={(o_index + 1).toString()}>
-                <p>{o.name}</p>
-                {o.variants.map((ov, ov_index) => (
-                    <div>
-                        <input
-                            type="radio"
-                            id={"option_" + o_index.toString() + "_" + ov_index.toString()}
-                            name={o_index.toString()}
-                            value={ov_index}
-                            class="data-option"
-                        />
-                        <label for={"option_" + o_index.toString() + "_" + ov_index.toString()}>
-                            {ov.desc} (+{ov.price.toFixed(1)} $)
-                        </label>
-                    </div>
-                ))}
-            </TabItem>
-        ))
-    }
-</Tabs>
+<Steps>
+    <ol>
+        {
+            options_config.options.map((o, o_index) => (
+                <li>
+                    <p>{o.name}</p>
+                    {o.variants.map((ov, ov_index) => (
+                        <div>
+                            <input
+                                type="radio"
+                                id={"option_" + o_index.toString() + "_" + ov_index.toString()}
+                                name={o_index.toString()}
+                                value={ov_index}
+                                class="data-option"
+                            />
+                            <label for={"option_" + o_index.toString() + "_" + ov_index.toString()}>
+                                {ov.desc} (+{ov.price.toFixed(1)} $)
+                            </label>
+                        </div>
+                    ))}
+                </li>
+            ))
+        }
+    </ol>
+</Steps>
 
 <script is:inline define:vars={{ options_config }}>
     // Установить значения по умолчанию для опций
