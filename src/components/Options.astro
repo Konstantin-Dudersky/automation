@@ -103,9 +103,13 @@ export interface IOptionsConfig {
         });
     }
 
-    window.onload = function () {
+    addEventListener("DOMContentLoaded", (event) => {
         setOptionsDefault();
-    };
+    });
+
+    // window.onload = function () {
+    //     setOptionsDefault();
+    // };
 
     const buttons = document.querySelectorAll(".data-option");
     buttons.forEach((button) => {
