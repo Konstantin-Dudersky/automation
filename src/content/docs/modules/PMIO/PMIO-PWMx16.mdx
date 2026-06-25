@@ -5,7 +5,7 @@ description: Подробное описание модуля PMIO-PWMx16 - 16 �
 
 import Options  from '../../../../components/Options.astro';
 
-{/* import ExtConn from "./PMIO-AITx8/ext_conn.svg";*/}
+import ExtConn from "./PMIO-PWMx16/ext_conn.svg";
 import Schematic from "./PMIO-PWMx16/schematic.svg";
 import { options_config } from './PMIO-PWMx16/options.ts';
 
@@ -14,6 +14,9 @@ import { options_config } from './PMIO-PWMx16/options.ts';
 
 Работает на основе чипа **PCA9685** [^1].
 
+## Схема внешних подключений
+
+<ExtConn />
 
 ## Опции
 
@@ -28,4 +31,8 @@ import { options_config } from './PMIO-PWMx16/options.ts';
 
 <Schematic />
 
+ШИМ сигнал генерируется чипом **PCA9685** [^1]. Чип управляется по шине I²C с гальванической изоляцией **CA-IS3021** [^2].
+
 [^1]: **PCA9685** - https://www.nxp.com/products/power-drivers/lighting-driver-and-controller-ics/led-drivers/16-channel-12-bit-pwm-fm-plus-ic-bus-led-driver:PCA9685
+
+[^2]: **CA-IS3021** - https://e.chipanalog.com/products/interface/isolated/i2c/1298

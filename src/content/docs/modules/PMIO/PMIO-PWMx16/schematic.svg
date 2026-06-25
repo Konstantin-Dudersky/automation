@@ -28,9 +28,9 @@
      inkscape:document-units="px"
      inkscape:zoom="2.1527253"
      inkscape:cx="290.32966"
-     inkscape:cy="145.16483"
-     inkscape:window-width="3440"
-     inkscape:window-height="1368"
+     inkscape:cy="89.421535"
+     inkscape:window-width="1920"
+     inkscape:window-height="1008"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -549,7 +549,7 @@
          style="font-size:16px;fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.1"
          x="245.26401"
          y="55.600037"
-         id="tspan1">3.3V DC</tspan></text>
+         id="tspan1">5V DC</tspan></text>
     <text
        xml:space="preserve"
        style="font-size:16px;line-height:1.3;font-family:'PT Sans';-inkscape-font-specification:'PT Sans, Normal';text-align:center;letter-spacing:0px;writing-mode:lr-tb;direction:ltr;text-anchor:middle;fill:#333333;fill-opacity:1;stroke:none;stroke-width:0.1;stroke-linejoin:round;stroke-dasharray:none;stroke-opacity:1"

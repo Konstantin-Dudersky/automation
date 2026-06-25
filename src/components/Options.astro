@@ -107,10 +107,6 @@ export interface IOptionsConfig {
         setOptionsDefault();
     });
 
-    // window.onload = function () {
-    //     setOptionsDefault();
-    // };
-
     const buttons = document.querySelectorAll(".data-option");
     buttons.forEach((button) => {
         button.addEventListener("click", () => updateData());
