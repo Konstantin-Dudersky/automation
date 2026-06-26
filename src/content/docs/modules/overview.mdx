@@ -5,6 +5,33 @@ sidebar:
   order: 0
 ---
 
+import { CardGrid } from '@astrojs/starlight/components';
+import { LinkCard } from '@astrojs/starlight/components';
+
+import { frontmatter as pmcp_esp32c3 } from './PMCP/PMCP-ESP32C3.mdx';
+import { frontmatter as pmcp_llp } from './PMCP/PMCP-LLP.mdx';
+
+import { frontmatter as pmdr_bldc } from './PMDR/PMDR-BLDC.mdx';
+import { frontmatter as pmdr_stepx4 } from './PMDR/PMDR-STEPx4.mdx';
+
+import { frontmatter as pmif_1wire } from './PMIF/PMIF-1Wire.mdx';
+import { frontmatter as pmif_i2cx8 } from './PMIF/PMIF-I2Cx8.mdx';
+
+import { frontmatter as PMIO_AIRx4 } from './PMIO/PMIO-AIRx4.mdx';
+import { frontmatter as PMIO_AITx8 } from './PMIO/PMIO-AITx8.mdx';
+import { frontmatter as PMIO_AIUIx8 } from './PMIO/PMIO-AIUIx8.mdx';
+import { frontmatter as PMIO_AIWx4 } from './PMIO/PMIO-AIWx4.mdx';
+import { frontmatter as PMIO_DIx32 } from './PMIO/PMIO-DIx32.mdx';
+import { frontmatter as PMIO_DQx16 } from './PMIO/PMIO-DQx16.mdx';
+import { frontmatter as PMIO_INA226x4 } from './PMIO/PMIO-INA226x4.mdx';
+import { frontmatter as PMIO_PWMx16 } from './PMIO/PMIO-PWMx16.mdx';
+import { frontmatter as PMIO_RQx8 } from './PMIO/PMIO-RQx8.mdx';
+
+import { frontmatter as pmld_10 } from './PMLD/PMLD-10.mdx';
+import { frontmatter as pmld_18 } from './PMLD/PMLD-18.mdx';
+
+import { frontmatter as pmps_20w } from './PMPS/PMPS-20W.mdx';
+
 Линейка модулей, по аналогии с модулями промышленных контроллеров.
 
 В чем отличие от китайской рассыпухи:
@@ -21,34 +48,151 @@ sidebar:
 
 Область применения:
 
-- домашняя автоматизация
-
 - прототипирование устройств
 
-- сборка блоков управления для серийных устройств
+- домашняя автоматизация
+
+- комплектущие блоков управления для серийных устройств
 
 ## Список модулей
 
-Все модули можно разделить по группам:
+### Модули контроллеров (PMCP)
 
-- PMCP - модули контроллеров:
-    - [PMCP-ESP32C3](/modules/pmcp/pmcp-esp32c3) - контроллер на базе микроконтроллера ESP32-C3
-    - [PMCP-LLP](/modules/pmcp/pmcp-llp) - контроллер на базе одноплатника Luckfox Lyra
-- PMIO - дискретные и аналоговые входы/выходы:
-    - [PMIO-AITx8](/modules/pmio/pmio-aitx8) - подключение 8 термопар
-    - [PMIO-DIx32](/modules/pmio/pmio-dix32) - подключение 32 дискретных входов постоянного напряжения
-    - [PMIO-DQx16](/modules/pmio/pmio-dqx16) - управление 16 дискретными транзисторными выходами
-    - [PMIO-PWMx16](/modules/pmio/pmio-pwmx16) - управление 16 ШИМ выходами
-    - [PMIO-RQx8](/modules/pmio/pmio-rqx8) - управление 8 дискретными релейными выходами
-- PMIF - интерфейсы:
-    - [PMIF-I2Cx8](/modules/pmif/pmif-i2cx8) - опрос датчиков по интерфейсу I²C
-- PMDR - драйверы двигателей:
-- PMPS - блоки питания:
-    - [PMPS-20W](/modules/pmps/pmps-20w) - блок питания с входом AC 230В
-- PMLD - модули с светодиодной индикацией:
-    - [PMLD-10](/modules/pmld/pmld-10) - 10 светодиодов
-    - [PMLD-18](/modules/pmld/pmld-18) - 18 светодиодов
+<CardGrid>
+  <LinkCard
+      title={ pmcp_esp32c3.title }
+      href="/modules/pmcp/pmcp-esp32c3"
+      description={ pmcp_esp32c3.description }
+  >
+  </LinkCard>
+  <LinkCard
+      title={ pmcp_llp.title }
+      href="/modules/pmcp/pmcp-llp"
+      description={ pmcp_llp.description }
+  >
+  </LinkCard>
+</CardGrid>
 
+### Блоки питания (PMPS)
+
+<CardGrid>
+  <LinkCard
+      title={ pmps_20w.title }
+      href="/modules/pmps/pmps-20w"
+      description={ pmps_20w.description }
+  >
+  </LinkCard>
+</CardGrid>
+
+### Модули ввода/вывода (PMIO)
+
+<CardGrid>
+  <LinkCard
+      title={ PMIO_AIRx4.title }
+      href="/modules/pmio/pmio-airx4"
+      description={ PMIO_AIRx4.description }
+  >
+  </LinkCard>
+  <LinkCard
+      title={ PMIO_AITx8.title }
+      href="/modules/pmio/pmio-aitx8"
+      description={ PMIO_AITx8.description }
+  >
+  </LinkCard>
+  <LinkCard
+      title={ PMIO_AIUIx8.title }
+      href="/modules/pmio/pmio-aiuix8"
+      description={ PMIO_AIUIx8.description }
+  >
+  </LinkCard>
+  <LinkCard
+      title={ PMIO_AIWx4.title }
+      href="/modules/pmio/pmio-aiwx4"
+      description={ PMIO_AIWx4.description }
+  >
+  </LinkCard>
+  <LinkCard
+      title={ PMIO_DIx32.title }
+      href="/modules/pmio/pmio-dix32"
+      description={ PMIO_DIx32.description }
+  >
+  </LinkCard>
+  <LinkCard
+      title={ PMIO_DQx16.title }
+      href="/modules/pmio/pmio-dqx16"
+      description={ PMIO_DQx16.description }
+  >
+  </LinkCard>
+  <LinkCard
+      title={ PMIO_INA226x4.title }
+      href="/modules/pmio/pmio-ina226x4"
+      description={ PMIO_INA226x4.description }
+  >
+  </LinkCard>
+  <LinkCard
+      title={ PMIO_PWMx16.title }
+      href="/modules/pmio/pmio-pwmx16"
+      description={ PMIO_PWMx16.description }
+  >
+  </LinkCard>
+  <LinkCard
+      title={ PMIO_RQx8.title }
+      href="/modules/pmio/pmio-rqx8"
+      description={ PMIO_RQx8.description }
+  >
+  </LinkCard>
+</CardGrid>
+
+### Интерфейсы (PMIF)
+
+<CardGrid>
+  <LinkCard
+      title={ pmif_1wire.title }
+      href="/modules/pmif/pmif-1wire"
+      description={ pmif_1wire.description }
+  >
+  </LinkCard>
+  <LinkCard
+      title={ pmif_i2cx8.title }
+      href="/modules/pmif/pmif-i2cx8"
+      description={ pmif_i2cx8.description }
+  >
+  </LinkCard>
+</CardGrid>
+
+### Драйверы двигателей (PMDR)
+
+<CardGrid>
+  <LinkCard
+      title={ pmdr_bldc.title }
+      href="/modules/pmdr/pmdr-bldc"
+      description={ pmdr_bldc.description }
+  >
+  </LinkCard>
+  <LinkCard
+      title={ pmdr_stepx4.title }
+      href="/modules/pmdr/pmdr-stepx4"
+      description={ pmdr_stepx4.description }
+  >
+  </LinkCard>
+</CardGrid>
+
+### Светодиодная индикация (PMLD)
+
+<CardGrid>
+  <LinkCard
+      title={ pmld_10.title }
+      href="/modules/pmld/pmld-10"
+      description={ pmld_10.description }
+  >
+  </LinkCard>
+  <LinkCard
+      title={ pmld_18.title }
+      href="/modules/pmld/pmld-18"
+      description={ pmld_18.description }
+  >
+  </LinkCard>
+</CardGrid>
 
 ## Внешние размеры и крепление
 
