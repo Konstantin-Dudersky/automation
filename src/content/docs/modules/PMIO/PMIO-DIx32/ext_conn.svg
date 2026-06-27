@@ -8,7 +8,7 @@
    version="1.1"
    id="svg1"
    inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
-   sodipodi:docname="PMIO-DIx32_ext_conn.svg"
+   sodipodi:docname="ext_conn.svg"
    inkscape:export-filename="PMIO-DIx32_ext_conn.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
@@ -26,9 +26,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:deskcolor="#d1d1d1"
      inkscape:document-units="px"
-     inkscape:zoom="3.0243271"
-     inkscape:cx="610.38371"
-     inkscape:cy="347.01934"
+     inkscape:zoom="1.5121636"
+     inkscape:cx="493.33288"
+     inkscape:cy="347.51532"
      inkscape:window-width="2560"
      inkscape:window-height="1008"
      inkscape:window-x="0"
@@ -1209,7 +1209,7 @@
        sodipodi:arc-type="arc"
        d="m 592.49952,169.95115 a 2.5,2.5 0 0 1 -2.45062,2.54837 2.5,2.5 0 0 1 -2.54842,-2.45057 2.5,2.5 0 0 1 2.45053,-2.54847 2.5,2.5 0 0 1 2.54851,2.45048" />
     <path
-       style="fill:none;fill-opacity:1;stroke:#333333;stroke-width:1.00157;stroke-linejoin:round;stroke-dasharray:1.00157, 1.00157;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#333333;stroke-width:1.00157;stroke-linejoin:round;stroke-dasharray:3.00470996,3.00470996;stroke-dashoffset:0;stroke-opacity:1"
        d="M 690,230 H 290"
        id="path2" />
     <path
@@ -1684,7 +1684,7 @@
        d="M 399.99999,390 H 589.87717"
        id="path4-6-9" />
     <rect
-       style="fill:none;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round;stroke-dasharray:1.00157, 1.00157;stroke-dashoffset:0;stroke-opacity:1"
+       style="fill:none;fill-opacity:1;stroke:#333333;stroke-width:1;stroke-linejoin:round;stroke-dasharray:3,3;stroke-dashoffset:0;stroke-opacity:1"
        id="rect7"
        width="400"
        height="440"

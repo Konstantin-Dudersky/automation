@@ -32,7 +32,12 @@ export default defineConfig({
         { icon: "youtube", label: "YouTube", href: "https://www.youtube.com/@Tokarev_by" },
         { icon: "github", label: "GitHub", href: "https://github.com/Konstantin-Dudersky" },
       ],
-      customCss: ["./src/styles/global.css", "@fontsource/stix-two-math", "@fontsource/pt-sans"],
+      customCss: [
+        "./src/styles/global.css",
+        "./src/styles/icons.css",
+        "@fontsource/stix-two-math",
+        "@fontsource/pt-sans",
+      ],
       sidebar: [
         {
           label: "Весоизмерительные системы",

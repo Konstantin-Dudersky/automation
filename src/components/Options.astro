@@ -27,6 +27,12 @@ export interface IOptionsConfig {
 
 <p>
     Заданная конфигурация: <b><code id="option_variant_config" style="font-size: 1rem;"></code></b>
+    <button
+        id="option_copy_button"
+        style="background-color: transparent; border: 0px;"
+        title="Копировать в буфер"
+        ><span class="material-symbols--content-copy-outline-rounded"></span></button
+    >
 </p>
 
 <p>Стоимость: <b><code id="price" style="font-size: 1rem;"></code> $</b></p>
@@ -103,6 +109,18 @@ export interface IOptionsConfig {
         });
     }
 
+    function copyToClipboard() {
+        let text = document.querySelector("#option_variant_config").textContent;
+        navigator.clipboard.writeText(text).then(
+            function () {
+                console.log("Copy " + text + " to clipboard");
+            },
+            function (err) {
+                console.error("Async: Could not copy text: ", err);
+            },
+        );
+    }
+
     addEventListener("DOMContentLoaded", (event) => {
         setOptionsDefault();
     });
@@ -111,4 +129,8 @@ export interface IOptionsConfig {
     buttons.forEach((button) => {
         button.addEventListener("click", () => updateData());
     });
+
+    document
+        .querySelector("#option_copy_button")
+        .addEventListener("click", () => copyToClipboard());
 </script>
