@@ -1,5 +1,4 @@
 ---
-import { Steps } from "@astrojs/starlight/components";
 import { Tabs, TabItem } from "@astrojs/starlight/components";
 
 interface Props {
@@ -31,7 +30,8 @@ export interface IOptionsConfig {
         id="option_copy_button"
         style="background-color: transparent; border: 0px;"
         title="Копировать в буфер"
-        ><span class="material-symbols--content-copy-outline-rounded"></span></button
+    >
+        <span class="material-symbols--content-copy-outline-rounded"></span></button
     >
 </p>
 
@@ -53,6 +53,7 @@ export interface IOptionsConfig {
                                 name={o_index.toString()}
                                 value={ov_index}
                                 class="data-option"
+                                style="margin-right: 10px;"
                             />
                             <label for={"option_" + o_index.toString() + "_" + ov_index.toString()}>
                                 {ov.desc} (+{ov.price.toFixed(1)} $)
